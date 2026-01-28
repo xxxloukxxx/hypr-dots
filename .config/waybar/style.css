@@ -1,0 +1,70 @@
+@define-color background #111318;
+@define-color primary #fff;
+@define-color secondary #bfc6dc;
+
+* {
+  font-size: 16px;
+  font-family: "Hack Nerd Font Mono";
+}
+window#waybar {
+  all: unset;
+}
+
+.modules-left {
+  padding: 0px;
+  margin: 0px 0px 4px 0px;
+  background: alpha(@background, 0);
+}
+
+.modules-center {
+  padding: 0px;
+  margin: 0px 0px 0px 0px;
+  background: alpha(@background, 0);
+}
+
+.modules-right {
+  padding: 0px;
+  margin: 0px 0px 0px 0px;
+  background: alpha(@background, 0);
+}
+
+#clock {
+  padding: 0px 5px 0px 10px;
+  color: @primary;
+  transition: all 0.3s ease;
+}
+
+#pulseaudio {
+  padding: 0px 0px;
+  color: @primary;
+  transition: all 0.3s ease;
+}
+
+#workspaces {
+  padding: 0px 0px 0px 5px;
+}
+
+#workspaces button {
+  all: unset;
+  padding: 0px 3px;
+  color: alpha(@primary, 0.7);
+  transition: all 0.2s ease;
+}
+
+#workspaces button.active {
+  color: @primary;
+  border: none;
+  text-shadow: 0px 0px 1.5px rgba(0, 0, 0, 1);
+}
+
+#workspaces button.empty {
+  color: alpha(@primary, 0.2);
+  border: none;
+  text-shadow: 0px 0px 1.5px rgba(0, 0, 0, 0.6);
+}
+
+#workspaces button.empty.active {
+  color: @primary;
+  border: none;
+  text-shadow: 0px 0px 1.5px rgba(0, 0, 0, 0.6);
+}
