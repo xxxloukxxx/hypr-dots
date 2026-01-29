@@ -1,17 +1,16 @@
 if [ -d "$HOME/.oh-my-zsh" ]; then
-    ZSH_THEME="avit"
+    ZSH_THEME="refined"
     COMPLETION_WAITING_DOTS="true"
+    plugins=(themes git tmux fzf debian z)
+
+    apt_upgr='upgrade'
+    apt_pref='apt-get'
 
     export ZSH="$HOME/.oh-my-zsh"
 
     zstyle ':omz:update' mode auto
     zstyle ':omz:update' verbose silent
     zstyle ':omz:update' frequency 12
-
-    plugins=(themes git tmux fzf debian z)
-
-    apt_pref='apt-get'
-    apt_upgr='upgrade'
 
     [ -f $ZSH/oh-my-zsh.sh ] && source $ZSH/oh-my-zsh.sh
 else
@@ -55,13 +54,12 @@ n() {
     [ "${NNNLVL:-0}" -eq 0 ] || {
         echo "nnn is already running"
             return
-        }
-    export NNN_TMPFILE="${XDG_CONFIG_HOME:-$HOME/.config}/nnn/.lastd"
-    command nnn "$@"
-    [ ! -f "$NNN_TMPFILE" ] || {
-        . "$NNN_TMPFILE"
-            rm -f "$NNN_TMPFILE" > /dev/null
-        }
+    }
+export NNN_TMPFILE="${XDG_CONFIG_HOME:-$HOME/.config}/nnn/.lastd"
+command nnn "$@"
+[ ! -f "$NNN_TMPFILE" ] || {
+    . "$NNN_TMPFILE"
+    rm -f "$NNN_TMPFILE" > /dev/null }
 }
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
