@@ -3,7 +3,7 @@
   "position": "top",
   "reload_style_on_change": true,
   "modules-left": ["hyprland/workspaces"],
-  "modules-right": ["pulseaudio", "clock"],
+  "modules-right": ["pulseaudio", "clock", "tray"],
 
   "pulseaudio": {
     "format": "{icon} {volume}%",

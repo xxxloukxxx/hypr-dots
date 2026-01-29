@@ -68,3 +68,7 @@ window#waybar {
   border: none;
   text-shadow: 0px 0px 1.5px rgba(0, 0, 0, 0.6);
 }
+
+#tray {
+  padding : 0 6px;
+}

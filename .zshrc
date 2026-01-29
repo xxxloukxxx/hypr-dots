@@ -1,5 +1,7 @@
 if [ -d "$HOME/.oh-my-zsh" ]; then
-    ZSH_THEME="refined"
+    ZSH_THEME="avit"
+    # ZSH_THEME="minimal"
+    # ZSH_THEME="refined"
     COMPLETION_WAITING_DOTS="true"
     plugins=(themes git tmux fzf debian z)
 
