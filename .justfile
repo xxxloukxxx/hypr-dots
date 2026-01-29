@@ -1,11 +1,6 @@
 set shell := ["bash", "-eu", "-o", "pipefail", "-c"]
 
-@default:
-    echo "{{BLUE}} --> Hypr-dots ...{{NORMAL}}"
-    just testing
-    just install-pkg
-    just sync-cfg
-    just fonts
+@default: testing install-pkg sync-cfg fonts
 
 @testing:
     @# Moving to testing
