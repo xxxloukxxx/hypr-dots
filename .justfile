@@ -13,7 +13,7 @@ set shell := ["bash", "-eu", "-o", "pipefail", "-c"]
     @# Install hyprland and friends ...
     sudo apt-get -y -q=5 install rsync wget curl
     sudo apt-get -y -q=5 install vim vim-gtk3 make p7zip-full nnn gcc build-essential locales-all fzf tmux silversearcher-ag rsync just zsh zsh-syntax-highlighting zsh-autosuggestions
-    sudo apt-get -y -q=5 install firefox-esr firefox-esr-l10n-fr qimgv greetd "fonts-hack*" fonts-agave pulseaudio-utils trash-cli pulseaudio pavucontrol rofi greetd p7zip-full foot clang clangd "hypr*" waybar npm dunst
+    sudo apt-get -y -q=5 install firefox-esr firefox-esr-l10n-fr qimgv greetd "fonts-hack*" fonts-agave pulseaudio-utils trash-cli pulseaudio pavucontrol fuzzel greetd p7zip-full foot clang clangd "hypr*" waybar npm dunst
     sudo apt-get -y -q=5 install zsh zsh-syntax-highlighting zsh-autosuggestions
     sudo chsh -s /usr/bin/zsh cedric
 
