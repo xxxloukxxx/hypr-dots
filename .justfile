@@ -23,6 +23,7 @@ set shell := ["bash", "-eu", "-o", "pipefail", "-c"]
     rsync -aq .vimrc ~/
     rsync -aq .zshrc ~/
     rsync -aq .gitconfig ~/
+    rsync -aq .XCompose ~/
     sudo rsync -aq etc/greetd/ /etc/greetd/
 
 @fonts:
