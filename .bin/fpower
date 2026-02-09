@@ -1,0 +1,12 @@
+#!/bin/sh
+
+choice=`/usr/bin/echo -e "Lock\nReboot\nShutdown" | fuzzel -l 3 --dmenu`
+
+# execute the choice in background
+case "$choice" in
+   Lock) hyprlock & ;;
+   Reboot) sudo /usr/bin/systemctl reboot & ;;
+   Shutdown) sudo /usr/bin/systemctl poweroff & ;;
+   *) exit ;;
+esac
+
