@@ -1,0 +1,15 @@
+hyprctl binds -j | jq -r '
+  def hasbit(m; b):
+    ((m / b | floor) % 2) == 1;
+
+  def mods(m):
+    [
+      (if hasbit(m;64) then "Super" else empty end),
+      (if hasbit(m;4)  then "Ctrl"  else empty end),
+      (if hasbit(m;1)  then "Shift" else empty end),
+      (if hasbit(m;8)  then "Alt"   else empty end)
+    ] | join("+");
+
+  .[] |
+  "\(mods(.modmask))+\(.key) : \(.description // "Sans description")"
+' | fuzzel --dmenu -l 20
